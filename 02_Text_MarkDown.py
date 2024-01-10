@@ -4,11 +4,17 @@ import streamlit as st
 # title
 st.title("Streamlit Text")
 
+# header
+st.header("Header")
+
+# subheader
+st.subheader("Subheader")
+
 # Text
-st.text("Hello, World!")
+st.text("Text")
 
 # Write
-st.write("Hello, World!")
+st.write("Write")
 
 # Markdown
 st.markdown("# Heading1")
