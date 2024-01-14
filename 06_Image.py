@@ -27,14 +27,30 @@ col1.image("resources/img1.jpeg")
 col2.image("resources/img2.jpeg")
 col3.image("resources/img3.jpeg", caption="Watches")
 
+st.markdown("---")
+
+# Another way of displaying images
+from PIL import Image
+img = Image.open("resources/img1.jpeg")
+st.image(img, width=300, caption="Flower")
+
 # Audio
 
 st.audio("resources/audio1.mp3")
 
 st.audio("resources/audio2.mp3")
 
+# Another way of displaying audio
+audio_file = open("resources/audio1.mp3", "rb").read()
+st.audio(audio_file, format="audio/mp3")
+
 # Video
 
 st.video("resources/video1.mp4")
 
 st.video("resources/video2.mp4")
+
+# Another way of displaying videos
+video_file = open("resources/video1.mp4", "rb").read()
+st.video(video_file)
+
