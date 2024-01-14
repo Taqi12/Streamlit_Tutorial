@@ -46,10 +46,11 @@ else:
 # Checkbox Widget
 clicked = st.checkbox("I agree")
 if clicked:
-    st.write("You agreed.")
+    #st.write("You agreed.")
+    st.markdown("You agreed.")
 else:
-    st.write("You must agree to continue.")
-
+    #st.write("You must agree to continue.")
+    st.warning("You must agree to continue.")
 st.markdown("---")
 
 # Radio Button Widget
@@ -187,12 +188,12 @@ st.write('The current number is ', number)
 st.markdown("---")
 
 # Camera Input
-picture = st.camera_input("Take a picture")
+#picture = st.camera_input("Take a picture")
 
-if picture:
-    st.image(picture)
+#if picture:
+#    st.image(picture)
 
-st.markdown("---")
+#st.markdown("---")
 
 # Progress Bar
 import time
@@ -207,3 +208,13 @@ time.sleep(1)
 my_bar.empty()
 
 st.button("Progress Bar")
+
+st.markdown("---")
+# another example for progress bar
+pro_bar = st.progress(0)
+for i in range(10):
+    pro_bar.progress(i + 1)
+
+
+st.markdown("---")
+
